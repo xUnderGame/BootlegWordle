@@ -1,0 +1,36 @@
+{
+    "es": {
+        "menuOption1": "1) Comenzar una partida.",
+        "menuOption2": "2) Cambiar idioma.",
+        "menuOption3": "3) Historial de partidas.",
+        "menuOption4": "4) Salir del programa.",
+        "gameend": "Fin del juego!",
+        "gameover": "Has perdido el juego...",
+        "gamewin": "Has ganado!",
+        "gameword": "La palabra era {}.",
+        "gamelives": "Te quedan {} intentos.",
+        "gamename": "Bienvenido! Porfavor, introduce tu nombre de jugador.",
+        "gametries": "Cuantos intentos quieres tener?",
+        "thankyou": "Gracias por jugar! Espero que te hayas divertido.",
+        "confirm":  "Estas seguro de quieres salir? (Y/N)",
+        "historytitle": "Historial de partidas.",
+        "gameload": "Encontrado una partida con el mismo nombre! Quieres cargarla? (Y/N)"
+    },
+    "en": {
+        "menuOption1": "1) Play the game.",
+        "menuOption2": "2) Change Language.",
+        "menuOption3": "3) Game history.",
+        "menuOption4": "4) Exit the program.",
+        "gameend": "Game over!",
+        "gameover": "You lost the game...",
+        "gamewin": "You won!",
+        "gameword": "The word was {}.",
+        "gamelives": "You have {} tries left.",
+		"gamename": "Welcome! Please, insert your player name.",
+        "gametries": "How many attempts would you like to have?",
+        "thankyou": "Thanks for playing! I hope you had some fun.",
+        "confirm":  "Are you sure that you'd like to quit? (Y/N)",
+        "historytitle": "Game history.",
+        "gameload": "Found a save with the same name! Would you like to load it? (Y/N)"
+    }
+}
