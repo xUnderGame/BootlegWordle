@@ -41,6 +41,9 @@ namespace WordleProgram
             public string confirm { get; set; }
             public string historytitle { get; set; }
             public string gameload { get; set; }
+            public string historyname { get; set; }
+            public string historyattempts { get; set; }
+            public string historytime { get; set; }
         }
 
         // Spanish language.
@@ -61,6 +64,9 @@ namespace WordleProgram
             public string confirm { get; set; }
             public string historytitle { get; set; }
             public string gameload { get; set; }
+            public string historyname { get; set; }
+            public string historyattempts { get; set; }
+            public string historytime { get; set; }
         }
 
         // Root language, how a language json file should be read.
@@ -90,6 +96,7 @@ namespace WordleProgram
             public int tries { get; set; }
             public Guesses guesses { get; set; }
             public long time { get; set; }
+            public int guessindex { get; set; }
         }
 
 
@@ -162,11 +169,13 @@ namespace WordleProgram
             // Check if a game with that name already exists.
             foreach (var file in Directory.GetFiles(@"games"))
             {
-                if (file.Contains(playerName))
+                if (playerName == file.Replace(@"games\", "").Replace(".json", ""))
                 {
                     if (!GetInput(GetText("gameload"), true, "n").ToLower().Contains("y")) break;
                     string rawJson = File.ReadAllText(file);
-                    return JsonSerializer.Deserialize<gameJson>(rawJson);
+                    var deserialized = JsonSerializer.Deserialize<gameJson>(rawJson);
+                    deserialized.guess = new List<string>() { "-", "-", "-", "-", "-" };
+                    return deserialized;
                 }
             }
 
@@ -191,7 +200,8 @@ namespace WordleProgram
                     guess5 = "-----",
                     guess6 = "-----"
                 },
-                time = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+                time = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+                guessindex = 1
             };
             SaveGame(newGame);
             return newGame;
@@ -200,7 +210,7 @@ namespace WordleProgram
         // Saves the game.
         public static void SaveGame(gameJson game)
         {
-            File.WriteAllText($@"games\{game.name}-{game.time}-savedGame.json", JsonSerializer.Serialize(game));
+            File.WriteAllText($@"games\{game.name}.json", JsonSerializer.Serialize(game));
         }
 
         // Colors the characters for every guess.
@@ -262,7 +272,7 @@ namespace WordleProgram
             {
                 string rawJson = File.ReadAllText(file);
                 gameJson loaded = JsonSerializer.Deserialize<gameJson>(rawJson);
-                Console.WriteLine($"Player name: {loaded.name}\tAttempts left: {loaded.tries}\tWordle: {loaded.wordle}\tCreated at: {file.Split("-")[1]}");
+                Console.WriteLine($"{GetText("historyname")} {loaded.name}\t{GetText("historyattempts")} {loaded.tries}\tWordle: {loaded.wordle}\t{GetText("historytime")} {loaded.time} (UNIX)");
             }
         }
 
@@ -272,14 +282,15 @@ namespace WordleProgram
         static void Main(string[] args)
         {
             Environment.CurrentDirectory = @"..\..\..\..\";
-            Console.Title = "C#'s Bootleg Wordle - UnderGame";
+            Console.Title = "C#'s Bootleg Wordle - UnderGame, v1.1.0";
             Console.WindowWidth = 120;
             MainMenu();
 
             // Program ended!
             StringToList(logo).ForEach(send => SendMessage(send, default, false, default, ConsoleColor.Green, default));
             SendMessage("|---------------------------------------------------------------------------------------|");
-            SendMessage($"{GetText("thankyou")}\n\n\n\n\n\n");
+            SendMessage($"{GetText("thankyou")}\n");
+            Console.ReadKey();
         }
 
         // The game's main menu, you'll be here a while.
@@ -327,9 +338,9 @@ namespace WordleProgram
         public static (gameJson, bool) MainGame()
         {
             gameJson game = GenerateGame();
+            if (game.guessindex != 1) game.guessindex++; // Needed for some reason...?
 
             // Lock the player in until they game over or guess the correct word.
-            int guessIndex = 1;
             do
             {
                 // Guess the word loop
@@ -357,18 +368,18 @@ namespace WordleProgram
                         // Submit the word.
                         case ConsoleKey.Enter:
                             if (wordIndex < game.guess.Count) break;
-                            SubmitGuess(game, guessIndex);
+                            SubmitGuess(game, game.guessindex);
 
                             // Resets the variables for another guess.
                             if (string.Concat(game.guess.ToArray()) == game.wordle.ToString()) return EndGame(game, true); // Checks if the user has won.
                             game.guess = new List<string> { "-", "-", "-", "-", "-" };
                             wordIndex = 0;
-                            guessIndex++;
+                            game.guessindex++;
                             break;
 
                         // Exit the game and save.
                         case ConsoleKey.Escape:
-                            if (GetInput($"\n;h{GetText("confirm")}", true, "n").ToLower() == "y") return EndGame(game, false, false);
+                            if (GetInput($"\n;-{GetText("confirm")}", true, "n").ToLower() == "y") return EndGame(game, false, false);
                             break;
 
                         // Add the word to the list.

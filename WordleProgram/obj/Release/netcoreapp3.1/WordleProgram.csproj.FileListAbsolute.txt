@@ -1,0 +1,14 @@
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.exe
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.deps.json
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.runtimeconfig.json
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.runtimeconfig.dev.json
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.dll
+D:\ITB\Programacion\BootlegWordle\WordleProgram\bin\Release\netcoreapp3.1\WordleProgram.pdb
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.csproj.AssemblyReference.cache
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.AssemblyInfoInputs.cache
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.AssemblyInfo.cs
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.csproj.CoreCompileInputs.cache
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.dll
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.pdb
+D:\ITB\Programacion\BootlegWordle\WordleProgram\obj\Release\netcoreapp3.1\WordleProgram.genruntimeconfig.cache

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\BootlegWordle\\WordleTest\\WordleTest.csproj": {}
+    "F:\\ITB\\Programacion\\BootlegWordle\\WordleTest\\WordleTest.csproj": {}
   },
   "projects": {
-    "C:\\git\\BootlegWordle\\WordleProgram\\WordleProgram.csproj": {
+    "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\WordleProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\BootlegWordle\\WordleProgram\\WordleProgram.csproj",
+        "projectUniqueName": "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\WordleProgram.csproj",
         "projectName": "WordleProgram",
-        "projectPath": "C:\\git\\BootlegWordle\\WordleProgram\\WordleProgram.csproj",
-        "packagesPath": "C:\\Users\\unaig\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\BootlegWordle\\WordleProgram\\obj\\",
+        "projectPath": "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\WordleProgram.csproj",
+        "packagesPath": "C:\\Users\\argo\\.nuget\\packages\\",
+        "outputPath": "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\unaig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\argo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,21 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\git\\BootlegWordle\\WordleTest\\WordleTest.csproj": {
+    "F:\\ITB\\Programacion\\BootlegWordle\\WordleTest\\WordleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\BootlegWordle\\WordleTest\\WordleTest.csproj",
+        "projectUniqueName": "F:\\ITB\\Programacion\\BootlegWordle\\WordleTest\\WordleTest.csproj",
         "projectName": "WordleTest",
-        "projectPath": "C:\\git\\BootlegWordle\\WordleTest\\WordleTest.csproj",
-        "packagesPath": "C:\\Users\\unaig\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\BootlegWordle\\WordleTest\\obj\\",
+        "projectPath": "F:\\ITB\\Programacion\\BootlegWordle\\WordleTest\\WordleTest.csproj",
+        "packagesPath": "C:\\Users\\argo\\.nuget\\packages\\",
+        "outputPath": "F:\\ITB\\Programacion\\BootlegWordle\\WordleTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\unaig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\argo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\git\\BootlegWordle\\WordleProgram\\WordleProgram.csproj": {
-                "projectPath": "C:\\git\\BootlegWordle\\WordleProgram\\WordleProgram.csproj"
+              "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\WordleProgram.csproj": {
+                "projectPath": "F:\\ITB\\Programacion\\BootlegWordle\\WordleProgram\\WordleProgram.csproj"
               }
             }
           }
@@ -126,8 +125,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -136,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }
